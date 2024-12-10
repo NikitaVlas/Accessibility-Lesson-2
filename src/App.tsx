@@ -4,11 +4,13 @@ import styled, {keyframes} from 'styled-components';
 
 const Navigation = () => {
     return (
-        <Menu>
-            <MenuItem>Item 1</MenuItem>
-            <MenuItem>Item 2</MenuItem>
-            <MenuItem>Item 3</MenuItem>
-        </Menu>
+        <nav>
+            <Menu>
+                <MenuItem><a href="#">Item 1</a></MenuItem>
+                <MenuItem><a href="#">Item 2</a></MenuItem>
+                <MenuItem><a href="#">Item 3</a></MenuItem>
+            </Menu>
+        </nav>
     );
 };
 
@@ -46,68 +48,77 @@ export default App;
 
 
 const Bouncing = keyframes`
-  50% {
-    transform: translateY(20%);
-  }  
+    50% {
+        transform: translateY(20%);
+    }
 `
 
-const Title = styled.div`
-  font-size: 1.5em;
-  text-align: center;
-  margin: 60px 0;
-  animation: ${Bouncing} 1s linear infinite alternate;
+const Title = styled.h1`
+    font-size: 1.5em;
+    text-align: center;
+    margin: 60px 0;
+    animation: ${Bouncing} 1s linear infinite alternate;
 `;
 
-const Header = styled.div`
-  height: 80px;
-  background-color: #e91e63;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+const Header = styled.header`
+    height: 80px;
+    background-color: #e91e63;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+    button {
+        background-color: transparent;
+    }
 `;
 
-const Menu = styled.div`
-  display: flex;
-  gap: 15px;
+const Menu = styled.ul`
+    display: flex;
+    gap: 15px;
+    list-style: none;
 `;
 
-const MenuItem = styled.div`
-  color: white;
-  font-weight: bold;
+const MenuItem = styled.li`
+    a {
+        color: white;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
 `;
 
-const LoginBtn = styled.div`
-  color: white;
-  font-weight: bold;
-  padding: 10px 20px;
-  border: 2px solid;
-  border-radius: 5px;
+const LoginBtn = styled.button`
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: 2px solid;
+    border-radius: 5px;
 `;
 
-const Block = styled.div`
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+const Block = styled.section`
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 `;
 
-const Form = styled.div`
-  width: 100%;
-  max-width: 500px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px
+const Form = styled.form`
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px
 `;
 
 const Label = styled.label`
-  font-size: 1rem;
-  line-height: 2rem;
+    font-size: 1rem;
+    line-height: 2rem;
 `;
 
 const Field = styled.input`
-  padding: 5px 15px;
-  width: 100%;
-  font-size: 1rem;
+    padding: 5px 15px;
+    width: 100%;
+    font-size: 1rem;
 `;
 
 
