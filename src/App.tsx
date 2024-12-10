@@ -5,10 +5,10 @@ import styled, {keyframes} from 'styled-components';
 const Navigation = () => {
     return (
         <nav>
-            <Menu>
-                <MenuItem><a href="#">Item 1</a></MenuItem>
-                <MenuItem><a href="#">Item 2</a></MenuItem>
-                <MenuItem><a href="#">Item 3</a></MenuItem>
+            <Menu role="menu">
+                <MenuItem role="menuitem"><a href="#">Item 1</a></MenuItem>
+                <MenuItem role="menuitem"><a href="#">Item 2</a></MenuItem>
+                <MenuItem role="menuitem"><a href="#">Item 3</a></MenuItem>
             </Menu>
         </nav>
     );
